@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Home page</title>
+	<style type="text/css">
+		.profile {
+			background-image: url(images/events.jpg);
+			background-color: beige;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="profile"><br><br>
+		<h1 style="color: peru;" align="center"> Profile</h1>
+		<form>
+			<h3 align="center">
+				Email: <input type="text" th:value="${details.email}" /><br><br><br>
+				Paasword: <input type="text" th:value="${details.password}" /><br><br><br>
+				Name: <input type="text" th:value="${details.name}" /><br><br><br>
+				Phonenumber:<input type="text" th:value="${details.phonenumber}" /><br><br><br>
+				Address: <input type="text" th:value="${details.address}" /><br><br><br>
+		</form>
+		</h3>
+		<br>
+		<br>
+		<h3 align="center">
+			<a href="http://localhost:8080/event">Create Event</a>
+		</h3>
+		<br>
+		<h3 align="center">
+			<a href="http://localhost:8080/showevent">NearBy Event</a>
+		</h3>
+		<br><br><br>
+	</div>
+</body>
+
+</html>
