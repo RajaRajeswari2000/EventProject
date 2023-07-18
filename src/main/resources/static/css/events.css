@@ -2,11 +2,12 @@
 
 body {
 	text-align: center;
-	background-image: url("https://shorturl.at/pyNQV");
+	background-image: url("/image/background.jpg");
 	background-size: cover;
 }
 
 ul {
+	align-items: end;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -15,7 +16,7 @@ ul {
 }
 
 li {
-	float: left;
+	float: right;
 }
 
 li a {

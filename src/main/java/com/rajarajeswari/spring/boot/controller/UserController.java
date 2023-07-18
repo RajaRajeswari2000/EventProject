@@ -28,6 +28,11 @@ public class UserController {
 	public String homepage() {
 		return "welcome";
 	}
+	
+	@RequestMapping("login")
+	public String loginPage() {
+		return "login";
+	}
 
 	@RequestMapping(value = "userdetails", method = RequestMethod.POST)
 	public String userdetails(@ModelAttribute UserRegisterEntity userdetails) {

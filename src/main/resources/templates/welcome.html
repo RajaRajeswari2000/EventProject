@@ -3,41 +3,28 @@
 
 <head>
 
-     <meta charset=utf-8>
+	<meta charset=utf-8>
 	<title>Home page</title>
-     <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" th:href="@{/css/events.css}" />
-	
+
 
 
 </head>
 
 <body class="body">
 	<div>
-		<br>
 
 		<ul>
-			<li><a class="active" href="#home">Home</a></li>
-			<li><a href="#news">News</a></li>
-			<li><a href="#contact">Contact</a></li>
 			<li><a href="#about">About</a></li>
+			<li><a href="http://localhost:8080/register">Register</a></li>
+			<li><a href="http://localhost:8080/login">Login</a></li>
+			<li><a class="active" href="#home">Create Events</a></li>
 		</ul>
 
 
-		<h1 align="center">Welcome to Find NearBy Events</h1>
-		<h3 align="center">
-			Login<br> <br>
-		</h3>
-
-		<form action="getdetails" method="post">
-			<h3 align="center">
-				Email: <input type="text" name="email" /><br> <br>
-				Password: <input type="text" name="password" /> <input type="submit" /><br> If you don't have account?<a
-					href="http://localhost:8080/register">Register</a>
-			</h3>
-		</form>
+		<h1 align="center">Welcome to Eventz</h1>
 		<br>
-
 		<br>
 		<br>
 	</div>
