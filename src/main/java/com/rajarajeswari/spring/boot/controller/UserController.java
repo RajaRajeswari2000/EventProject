@@ -26,7 +26,7 @@ public class UserController {
 
 	@RequestMapping("/")
 	public String homepage() {
-		return "welcome";
+		return "home";
 	}
 	
 	@RequestMapping("login")
@@ -34,24 +34,33 @@ public class UserController {
 		return "login";
 	}
 
-	@RequestMapping(value = "userdetails", method = RequestMethod.POST)
-	public String userdetails(@ModelAttribute UserRegisterEntity userdetails) {
-		service.savedetails(userdetails);
-		return "welcome";
-	}
-
 	@RequestMapping("/register")
 	public String register() {
 		return "register";
 	}
+	
+	@RequestMapping("/logout")
+	public String logout() {
+		return "home";
+	}
+	
+	@RequestMapping("/createEvent")
+	public String createEvent() {
+		return "login";
+	}
+	
+	@RequestMapping("/about")
+	public String about() {
+		return "about";
+	}
 
-	@PostMapping("getdetails")
+	@PostMapping("member-accout")
 	public ModelAndView login(@RequestParam String email, @RequestParam String password) {
 		ModelAndView m = new ModelAndView();
 		List<UserRegisterEntity> entity = service.details(email, password);
-		m.setViewName("home");
+		m.setViewName("profile");
 		if (entity == null) {
-			m.setViewName("welcome");
+			m.setViewName("login");
 			String reply = "email id and password couldn't match";
 			m.addObject("reply", reply);
 		} else {
@@ -61,8 +70,13 @@ public class UserController {
 		}
 		return m;
 	}
-	
+	@RequestMapping(value = "userdetails", method = RequestMethod.POST)
+	public String userdetails(@ModelAttribute UserRegisterEntity userdetails) {
+		service.savedetails(userdetails);
+		return "login";
+	}
 
+	
 	/*
 	 * @GetMapping("getdetails/{email}/{password}") public ModelAndView
 	 * login(@PathVariable("email") String email, @PathVariable("password") String

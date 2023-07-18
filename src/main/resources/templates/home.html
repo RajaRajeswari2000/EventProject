@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="ISO-8859-1">
+
+	<meta charset=utf-8>
 	<title>Home page</title>
-	<style type="text/css">
-		.profile {
-			background-image: url(images/events.jpg);
-			background-color: beige;
-		}
-	</style>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{/css/events.css}" />
+
+
+
 </head>
 
-<body>
-	<div class="profile"><br><br>
-		<h1 style="color: peru;" align="center"> Profile</h1>
-		<form>
-			<h3 align="center">
-				Email: <input type="text" th:value="${details.email}" /><br><br><br>
-				Paasword: <input type="text" th:value="${details.password}" /><br><br><br>
-				Name: <input type="text" th:value="${details.name}" /><br><br><br>
-				Phonenumber:<input type="text" th:value="${details.phonenumber}" /><br><br><br>
-				Address: <input type="text" th:value="${details.address}" /><br><br><br>
-		</form>
-		</h3>
+<body class="body">
+	<div>
+
+		<ul>
+			<li><a href="http://localhost:8080/about">About</a></li>
+			<li><a href="http://localhost:8080/register">Register</a></li>
+			<li><a href="http://localhost:8080/login">Login</a></li>
+			<li><a href="http://localhost:8080/createEvent">Create Events</a></li>
+		</ul>
+
+
+		<h1 align="center">Welcome to Eventz</h1>
 		<br>
 		<br>
-		<h3 align="center">
-			<a href="http://localhost:8080/event">Create Event</a>
-		</h3>
 		<br>
-		<h3 align="center">
-			<a href="http://localhost:8080/showevent">NearBy Event</a>
-		</h3>
-		<br><br><br>
 	</div>
 </body>
 
