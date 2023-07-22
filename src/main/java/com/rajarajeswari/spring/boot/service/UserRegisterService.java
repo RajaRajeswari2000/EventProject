@@ -29,4 +29,14 @@ public class UserRegisterService {
 		}
 	}
 
+	public List<UserRegisterEntity> getall() {
+		List<UserRegisterEntity> details=repo.findAll();
+		if (details.size() == 0) {
+			return null;
+		} else {
+			return details;
+		}
+		
+	}
+
 }

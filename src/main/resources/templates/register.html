@@ -1,34 +1,29 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<style type="text/css">
-.user {
-	background-color:beige;
-}
-</style>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{/css/events.css}" />
 </head>
-<body>
-	<div class="user">
-		<h3 style="font-size: 200%;"  align="center">
-		    <br> <br><br> <br>
-			Register page
+
+<body class="body">
+
+	<h3 style="font-size: 200%;" align="center">
+		Register page
+	</h3>
+	<br> <br>
+	<form action="userdetails" method="post">
+		<h3 align="center">
+			<label for="email">Email:</label><input type="text" name="email" required /><br><br>
+			<label for="password">Password:</label><input type="text" name="password" required /><br><br>
+			<label for="name">Name:</label><input type="text" name="name" required><br><br>
+			<label for="phonenumber">PhoneNumber:</label><input type="text" name="phonenumber" required><br><br>
+			<label for="address">Address:</label><input type="text" name="address" required><br><br>
+			<label for="sumbit"> </label><input type="submit" />
 		</h3>
-		<br> <br>
-		<form action="userdetails" method="post">
-			<h3 align="center">
-		Email:      <input type="text" name="email" required /><br><br>
-		Password:   <input type="text" name="password" required /><br><br>
-	    Name:       <input type="text" name="name" required><br><br>
-	    PhoneNumber:<input type="text" name="phonenumber" required><br><br>
-	    Address:    <input type="text" name="address" required><br><br>
-			              <input type="submit" />
-			</h3>
-		</form>
-		<br> <br> <br> <br> <br>
-		<br>
-	</div>
+	</form>
 </body>
+
 </html>

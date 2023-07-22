@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="ISO-8859-1">
-<title>Login Page</title>
+	<meta charset="ISO-8859-1">
+	<title>Login Page</title>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{/css/events.css}" />
 </head>
-<body>
-	<h3 align="center">
-			Login<br> <br>
+
+<body class="body">
+	<h3 style="font-size: 200%;" align="center">
+		Login<br> <br>
+	</h3>
+	<form action="member-accout" method="post">
+		<h3 align="center">
+			<label for="email">Email:</label><input type="text" id="email" name="email" required="mandatory" /><br> <br>
+			<label for="password">Password:</label><input type="text" id="password" name="password" /> <br><br>
+			<label for="sumbit"></label>  <input type="submit" /><br> <br>
+		    If you don't have account?<a href="http://localhost:8080/register">Register</a>
 		</h3>
-		<form action="member-accout" method="post">
-			<h3 align="center">
-				Email: <input type="text" name="email" /><br> <br>
-				Password: <input type="text" name="password" /> <input type="submit" /><br> If you don't have account?<a
-					href="http://localhost:8080/register">Register</a>
-			</h3>
-		</form>
+	</form>
 
 </body>
+
 </html>

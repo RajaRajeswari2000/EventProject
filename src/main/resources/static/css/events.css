@@ -6,6 +6,11 @@ body {
 	background-size: cover;
 }
 
+label{
+	width:130px;
+	display: inline-flex;
+}
+
 ul {
 	align-items: end;
 	list-style-type: none;

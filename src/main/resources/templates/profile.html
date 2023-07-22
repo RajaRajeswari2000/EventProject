@@ -4,34 +4,30 @@
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Home page</title>
-	<style type="text/css">
-		.profile {
-			background-image: url(images/events.jpg);
-			background-color: beige;
-		}
-	</style>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" th:href="@{/css/events.css}" />
 </head>
 
-<body>
-	<div class="profile"><br><br>
-		<h1 style="color: peru;" align="center"> Profile</h1>
-		<form>
-			<h3 align="center">
-				Email: <input type="text" th:value="${details.email}" /><br><br><br>
-				Paasword: <input type="text" th:value="${details.password}" /><br><br><br>
-				Name: <input type="text" th:value="${details.name}" /><br><br><br>
-				Phonenumber:<input type="text" th:value="${details.phonenumber}" /><br><br><br>
-				Address: <input type="text" th:value="${details.address}" /><br><br><br>
-		</form>
-		</h3>
-		<br>
-		<br>
+<body class="body">
+	<h1 style="font-size: 200%;" align="center"> Profile</h1>
+
+	<form>
+
 		<h3 align="center">
-			<a href="http://localhost:8080/logout">Logout</a>
-		</h3>
-		<br>
-		<br><br><br>
-	</div>
+			<label for="email"> Email:</label><input type="text" th:value="${details.email}" /><br><br><br>
+			<label for="password"> Password:</label><input type="text" th:value="${details.password}" /><br><br><br>
+			<label for="name"> Name:</label><input type="text" th:value="${details.name}" /><br><br><br>
+			<label for="phonenumber"> PhoneNumber:</label><input type="text" th:value="${details.phonenumber}" /><br><br><br>
+			<label for="address"> Address:</label><input type="text" th:value="${details.address}" />
+	</form>
+	
+	</h3>
+	<br>
+
+	<h3 align="center">
+		<a href="http://localhost:8080/logout">Logout</a>
+	</h3>
+
 </body>
 
 </html>

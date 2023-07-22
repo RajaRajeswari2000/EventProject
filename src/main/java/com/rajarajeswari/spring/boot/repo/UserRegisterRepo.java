@@ -9,5 +9,7 @@ import com.rajarajeswari.spring.boot.entity.UserRegisterEntity;
 public interface UserRegisterRepo extends JpaRepository<UserRegisterEntity, String> {
 
 	List<UserRegisterEntity> findByEmailAndPassword(String email, String password);
+	
+	
 
 }
